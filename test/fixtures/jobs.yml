@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  email: MyString
+  date_posted: 2016-01-09
+  date_emailed: 2016-01-09
+  email_template: MyString
+  addressed_to: MyString
+  notes: 
+
+two:
+  company: MyString
+  email: MyString
+  date_posted: 2016-01-09
+  date_emailed: 2016-01-09
+  email_template: MyString
+  addressed_to: MyString
+  notes: 

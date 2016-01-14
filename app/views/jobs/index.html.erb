@@ -1,0 +1,20 @@
+<div ng-controller="jaegerController">
+  <table class="joblist">
+    <thead>
+      <th>Company</th>
+      <th>Position</th>
+      <th>Location</th>
+      <th>Salary</th>
+      <th>Status</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="job in jobs">
+        <td>{{job.company}}</td>
+        <td>{{job.position}}</td>
+        <td>{{job.location}}</td>
+        <td>{{job.salary}}</td>
+        <td>{{job.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
