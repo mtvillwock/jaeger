@@ -1,9 +1,20 @@
 var app = angular.module('jaeger', []);
 
-app.controller('jaegerController',['$scope', '$http', function($scope, $http) {
-  $http.get('/jobs.json').success(function(response) {
-    $scope.jobs = response.jobs;
-  });
+app.factory('Job', function() {
+    var factory = {};
+    // attach properties/function like get, post, put, delete here
+    // can refactor to use $resource instead of $http
+    factory.get = function() {
+      return $http.get('/jobs.json');
+    }
+    return factory;
+  })
+
+app.controller('jaegerController',['$scope', '$http', 'Job', function($scope, $http, Job) {
+  Job.get()
+    .success(function(response) {
+      $scope.jobs = response.jobs;
+    });
 
   $scope.addJob = function(){
     // Validate that company input is not blank
